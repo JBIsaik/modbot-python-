@@ -4,7 +4,7 @@ import config
 from config import token, link, prefix, ownerid
 from discord.ext.commands import Bot
 
-client = Bot(@)
+client = Bot(prefix)
 
 @client.event
 async def on_ready():
@@ -272,4 +272,4 @@ async def unmute(ctx, *, member : discord.Member):
     await client.say("**%s** Times up...You are Unmuted!"%member.mention)
 
 
-client.run(8oiwigDVsErsbTiZW4K2z68Igjw2QvoJ)
+client.run(token)
