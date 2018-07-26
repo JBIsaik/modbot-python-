@@ -1,4 +1,4 @@
-token = '8oiwigDVsErsbTiZW4K2z68Igjw2QvoJ'
+token = 'NDcxOTUyODk5NzgyNjA2ODQ4.DjsVGg.cAyaEStZpbwwNUMO2jskGdKg6K8'
 
 prefix = '^' #put prefix here
 
