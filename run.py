@@ -95,7 +95,7 @@ async def clear(ctx, number):
     user_roles = [r.name.lower() for r in ctx.message.author.roles]
 
     if "Support Team" not in user_roles:
-        return await client.say("You do not have the role: Admin")
+        return await client.say("You do not have the role:Support Team")
     pass
     mgs = []
     number = int(number)
@@ -108,7 +108,7 @@ async def warn(user="", reason="", mod="", n="", channel=""):
     """Warns a Member"""
     user_roles = [r.name.lower() for r in ctx.message.author.roles]
 
-    if "admin" not in user_roles:
+    if "Support Team" not in user_roles:
         return await client.say("You do not have the role: Admin")
     pass
 
