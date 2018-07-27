@@ -6,3 +6,4 @@ link = 'https://discordapp.com/api/oauth2/authorize?client_id=472073031770963978
 
 ownerid = '385210898694012938' #put your id here
 
+serverlink = 'https://discord.gg/rFNxRn9'
