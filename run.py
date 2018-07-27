@@ -94,7 +94,7 @@ async def clear(ctx, number):
     '''Clears The Chat 2-100'''
     user_roles = [r.name.lower() for r in ctx.message.author.roles]
 
-    if "admin" not in user_roles:
+    if "Support Team" not in user_roles:
         return await client.say("You do not have the role: Admin")
     pass
     mgs = []
@@ -136,7 +136,7 @@ async def report(ctx, user: discord.Member, *, reason):
     """Reports user and sends report to Bot Admin"""
     user_roles = [r.name.lower() for r in ctx.message.author.roles]
 
-    if "admin" not in user_roles:
+    if "User" not in user_roles:
         return await client.say("You do not have the role: Admin")
     pass
 
