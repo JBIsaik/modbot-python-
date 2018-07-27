@@ -122,14 +122,14 @@ async def warn(user="", reason="", mod="", n="", channel=""):
         await client.say(":x: No Warn Number was selected")
     if channel == "":
         await client.say(":x: No Channel entered!")
-    channel = client.get_channel(channel)
+    channel = client.get_channel(serverlog)
     em = discord.Embed(color=0x42fc07)
     em.add_field(name='Warning', value=("You Have Been Warned -->"))
     em.add_field(name='User', value=(user))
     em.add_field(name='Reason', value=(reason))
     em.add_field(name='Moderator', value=(mod))
     em.set_footer(text="Warnings had : {}".format(n))
-    await client.send_message(channel, embed=em)
+    await client.send_message(serverlog, embed=em)
 
 @client.command(pass_context=True, hidden = True)
 async def report(ctx, user: discord.Member, *, reason):
