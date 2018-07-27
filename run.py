@@ -234,7 +234,7 @@ async def kick(ctx, *, member : discord.Member = None):
             return await client.say(":x: Privilege too low!")
  
     embed = discord.Embed(description = "**%s** has been kicked."%member.name, color = 0xF00000)
-    embed.set_footer(text="BasicDiscord Bot v1.0")
+    embed.set_footer(text="Made by JBTech Test Bot")
     await client.say(embed = embed)
 
 #Mutes a Member From The server
