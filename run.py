@@ -30,12 +30,12 @@ async def botinvite():
 
 #gets a server invite and pms it to the user who requested it  
 
-@client.command(pass_context=True)
-async def serverinvte(context):
-	"""Pm's A Invite Code (To The Server) To The User"""
-	invite = await client.create_invite(context.message.server,max_uses=100,xkcd=True)
-	await client.send_message(context.message.author,"Your invite URL is {https://discord.gg/rFNxRn9}".format(invite.url))
-	await client.say ("Check Your Dm's :wink: ")
+@client.command()
+async def serverinvite():
+    '''A Link To Invite This Bot To Your Server!'''
+    await client.say("Check Your Dm's :wink:")
+    await client.whisper(serverlink)
+
 
 #Gets a List of Bans From The Server
 
@@ -137,7 +137,7 @@ async def report(ctx, user: discord.Member, *, reason):
     user_roles = [r.name.lower() for r in ctx.message.author.roles]
 
     if "User" not in user_roles:
-        return await client.say("You do not have the role: Admin")
+        return await client.say("You do not have the role: User")
     pass
 
     author = ctx.message.author
@@ -150,7 +150,7 @@ async def report(ctx, user: discord.Member, *, reason):
 
     args = ''.join(reason)
     adminlist = []
-    check = lambda r: r.name in 'YOUR_ROLE_HERE'
+    check = lambda r: r.name in 'Ownee'
 
     members = server.members
     for i in members:
