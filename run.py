@@ -33,7 +33,7 @@ async def botinvite():
 @client.command(pass_context=True)
 async def serverinvte(context):
 	"""Pm's A Invite Code (To The Server) To The User"""
-	invite = await client.create_invite(context.message.server,max_uses=1,xkcd=True)
+	invite = await client.create_invite(context.message.server,max_uses=100,xkcd=True)
 	await client.send_message(context.message.author,"Your invite URL is {}".format(invite.url))
 	await client.say ("Check Your Dm's :wink: ")
 
